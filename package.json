@@ -1,5 +1,5 @@
 {
-  "name": "pizza-express",
+  "name": "express-train",
   "version": "1.0.0",
   "description": "A place to admire trains",
   "main": "server.js",
@@ -8,20 +8,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/turingschool-examples/pizza-express.git"
+    "url": "git+https://github.com/turingschool-examples/express-train.git"
   },
   "keywords": [
     "express",
-    "pizza",
-    "yum",
-    "cassarole"
+    "mocha",
   ],
-  "author": "Steve Kinney",
+  "author": "Andrew Carmer",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/turingschool-examples/pizza-express/issues"
+    "url": "https://github.com/turingschool-examples/express-train/issues"
   },
-  "homepage": "https://github.com/turingschool-examples/pizza-express#readme",
+  "homepage": "https://github.com/turingschool-examples/express-train#readme",
   "dependencies": {
     "express": "^4.13.3",
     "express-handlebars": "^2.0.1",

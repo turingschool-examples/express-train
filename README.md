@@ -624,7 +624,7 @@ If we run the tests, we'll see:
     +1
 ```
 
-We were expecting to find one pizza in there and we didn't find any. In fairness, we didn't write this functionality, so I guess that's to be expected.
+We were expecting to find one train in there and we didn't find any. In fairness, we didn't write this functionality, so I guess that's to be expected.
 
 ### Generating Unique Keys
 
@@ -792,7 +792,7 @@ describe('Server', () => {
       this.request.post('/trains', { form: validTrain }, (error, response) => {
         if (error) { done(error); }
 
-        var pizzaCount = Object.keys(app.locals.trains).length;
+        var trainCount  = Object.keys(app.locals.trains).length;
 
         assert.equal(trainCount, 1, `Expected 1 trains, found ${trainCount}`);
 
@@ -833,7 +833,7 @@ And, finally, I'll update my test to reflect my new approach.
 
 ```js
 it('should receive and store data', (done) => {
-  var payload = { pizza: fixtures.validTrain };
+  var payload = { train: fixtures.validTrain };
 
   this.request.post('/trains', { form: payload }, (error, response) => {
     if (error) { done(error); }
@@ -948,7 +948,7 @@ app.get('/trains/:id', (request, response) => {
 });
 ```
 
-We fetch the pizza from our little data store, then we render the `train.jade` template passing in the `train` from our data store name-spaced under `train` so that it doesn't conflict with the application's title and whatnot.
+We fetch the train from our little data store, then we render the `train.jade` template passing in the `train` from our data store name-spaced under `train` so that it doesn't conflict with the application's title and whatnot.
 
 ### Your Turn
 
@@ -979,7 +979,7 @@ app.post('/trains', (request, response) => {
 We just send a 201 and call it a day. It would be better if we redirected the user to theirtrain page. Let's write a test and see how it goes. This test should go in the describe 'POST /trains' block, not the 'GET /trains' block.
 
 ```js
-it('should redirect the user to their new pizza', (done) => {
+it('should redirect the user to their new train', (done) => {
   var payload = { train: fixtures.validTrain };
 
   this.request.post('/trains', { form: payload }, (error, response) => {

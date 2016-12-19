@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.set('view engine', 'jade');
 app.set('port', process.env.PORT || 3000);
 
-app.locals.title = 'Train Express'
+app.locals.title = 'Express Train'
 app.locals.trains = {};
 
 app.get('/', (request, response) => {
@@ -20,21 +20,21 @@ app.get('/', (request, response) => {
 });
 
 app.post('/trains', (request, response) => {
-  if (!request.body.pizza) { return response.sendStatus(400); }
+  if (!request.body.train) { return response.sendStatus(400); }
 
   var id = generateId();
-  var pizza = request.body.pizza;
-  pizza.id = id;
+  var train = request.body.train;
+  train.id = id;
 
-  app.locals.trains[id] = pizza;
+  app.locals.trains[id] = train;
 
   response.redirect('/trains/' + id);
 });
 
 app.get('/trains/:id', (request, response) => {
-  var pizza = app.locals.trains[request.params.id];
+  var train = app.locals.trains[request.params.id];
 
-  response.render('pizza', { pizza: pizza });
+  response.render('train', { train: train });
 });
 
 if (!module.parent) {
