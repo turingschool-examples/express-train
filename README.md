@@ -1,6 +1,6 @@
 # Building and Unit Testing an Express Application
 
-[Here]() is a finished example of this app. You do not need to clone this to get started but it does provide a good reference if you want to check it out.
+[Here](https://github.com/turingschool-examples/express-train) is a finished example of this app. You do not need to clone this to get started but it does provide a good reference if you want to check it out.
 
 ## Getting Started
 
