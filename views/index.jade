@@ -1,0 +1,16 @@
+doctype html
+html(lang="en")
+  head
+    title= title
+  body
+    h1= title
+    form(method="post", action="/trains")
+      input(type="text", name="train[name]", placeholder="title")
+      input(type="text", name="train[times][]", placeholder="time")
+      input(type="text", name="train[times][]", placeholder="time")
+      input(type="submit", value="Submit")
+    hr
+    each train in trains
+      p
+        a(href='/trains/' + train.id) #{train.name}
+      
